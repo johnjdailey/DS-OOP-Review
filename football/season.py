@@ -1,4 +1,4 @@
-'''Tracks the season perfomance of different teams and generates a
+'''Tracks the season performance of different teams and generates a
 '''
 from possible_values import *
 from game import Game
@@ -8,7 +8,7 @@ from random import randint, uniform, sample
 def generate_rand_games(n=15):
     '''Generate n random games using value lists in possible_values
     '''
-    # Begin with enpty list
+    # Begin with empty list
     games = []
 
     # For the specified number of games, create an instance of the Game
@@ -17,7 +17,8 @@ def generate_rand_games(n=15):
     for _ in list(range(n)):
         # Get team names by sampling team_names from possible_values
         game = Game(teams=sample(team_names, k=2))
-
+        location = Game(location=sample(locations, k=1))
+        week = Game(week=sample(weeks, k=1))
         # Give each team a random number (from 0 to 3) of each:
         # touchdowns and field goals
         for i in list(range(randint(0, 4))):
@@ -99,6 +100,7 @@ def season_report(games):
     print(f'Average Score of Losing Team: {losing_team_average:.1f}\n')
 
     # You could choose to return something here if you wanted TODO
+    print("You win!")
 
 
 if __name__ == '__main__':

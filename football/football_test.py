@@ -2,7 +2,7 @@ import unittest
 from players import Player, Quarterback
 from possible_values import *
 from game import Game
-# TODO - some things you can add...
+from season import generate_rand_games
 
 # import the `season` file and make sure generate_random_games only
 # makes games with appropriate team names (and never has a team playing itself)
@@ -15,7 +15,7 @@ class FootballGameTest(unittest.TestCase):
     def test_field_goal_made(self):
         pass  # TODO
 
-    def test_get_winnerr(self):
+    def test_get_winner(self):
         pass  # TODO
 
 
