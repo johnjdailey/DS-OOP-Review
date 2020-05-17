@@ -13,10 +13,11 @@ from season import generate_rand_games
 class FootballGameTest(unittest.TestCase):
     '''test the class'''
     def test_field_goal_made(self):
-        pass  # TODO
+        game = Game(score=3)
+        self.assertEqual(game.score, 3)
 
     def test_get_winner(self):
-        pass  # TODO
+        pass
 
 
 class FootballPlayerTest(unittest.TestCase):

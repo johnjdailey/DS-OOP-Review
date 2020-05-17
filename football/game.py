@@ -73,7 +73,8 @@ class Game:
             raise ValueError('team parameter must be in self.teams')
         else:
             self.score[team] += 2
-
+            # self.score[team] = self.score[team] + 2
+            
     def get_winning_team(self):
         '''When game is done, this can be run to add attributes
         winning_team_ and losing_team_ to the game to easily see who won
